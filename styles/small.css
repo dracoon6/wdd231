@@ -1,0 +1,189 @@
+﻿/* --- Root Variables & Base Styles --- */
+:root {
+    --primary-color: #222; /* Dark gray for headers */
+    --secondary-color: #eee; /* Light gray for backgrounds */
+    --accent-color: #0056b3; /* Blue for links/active states */
+    --text-color: #333;
+    --heading-font: 'Roboto', sans-serif; /* Placeholder: Ensure you link Google Fonts */
+    --body-font: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Header & Logo --- */
+header {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+    header img {
+        height: 40px;
+        width: auto;
+    }
+
+    header span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex-grow: 1;
+        margin-left: 1rem;
+    }
+
+/* --- Hamburger Menu Button --- */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+    #menu::before {
+        content: "☰"; /* Hamburger Icon */
+    }
+
+    #menu.open::before {
+        content: "❌"; /* Close Icon */
+    }
+
+/* --- Navigation --- */
+nav {
+    background-color: var(--primary-color);
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default on small screens */
+}
+
+    .navigation.show {
+        display: block; /* Toggled via JavaScript */
+    }
+
+    .navigation li a {
+        display: block;
+        padding: 1rem;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+        .navigation li a:hover {
+            background-color: #444;
+        }
+
+        .navigation li a.active {
+            background-color: #555;
+            font-weight: bold;
+        }
+
+/* --- Main Content --- */
+main {
+    padding: 1rem;
+    max-width: 100%;
+}
+
+h1 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    background-color: var(--secondary-color);
+}
+
+    .card h2 {
+        background-color: var(--primary-color);
+        color: #fff;
+        margin: 0;
+        padding: 0.75rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .card p, .card img {
+        padding: 1rem;
+    }
+
+    .card img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+/* --- Course Section --- */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+}
+
+    .filter-buttons button {
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+    }
+
+        .filter-buttons button:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 10px;
+    padding: 1rem;
+}
+
+/* Dynamically styled in JS (completed vs not) */
+.course-card {
+    background-color: #ccc;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+    .course-card.completed {
+        background-color: #a5d6a7; /* Example: Green for completed */
+        border-color: #2e7d32;
+    }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 5px solid var(--primary-color);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+    .social img {
+        width: 40px;
+        height: auto;
+    }
