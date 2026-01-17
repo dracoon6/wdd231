@@ -1,0 +1,392 @@
+/* --- Root Variables & Base Styles --- */
+:root {
+    --primary-color: #1a3a52;        /* Dark Blue - Professional */
+    --secondary-color: #f4a460;      /* Sandy Brown - Warm accent */
+    --accent-color: #e67e22;         /* Orange - Action items */
+    --light-bg: #f8f9fa;             /* Light gray background */
+    --dark-text: #2c3e50;            /* Dark text */
+    --light-text: #ecf0f1;           /* Light text for dark backgrounds */
+    --border-color: #ddd;            /* Border color */
+    --success-color: #27ae60;        /* Green for success states */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.header-content img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header-text .tagline {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* --- Hamburger Menu Button --- */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--light-text);
+    display: block;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✕";
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background-color: var(--primary-color);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: var(--light-text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.directory-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.intro-text {
+    color: var(--dark-text);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- View Toggle --- */
+.view-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.view-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--secondary-color);
+    background-color: white;
+    color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.view-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.view-btn .icon {
+    font-size: 1.2rem;
+}
+
+/* --- Members Container --- */
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- Member Card --- */
+.member-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.member-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.member-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--light-bg);
+}
+
+.member-card-content {
+    padding: 1.5rem;
+}
+
+.member-card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.member-card-content p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.member-address {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.member-phone {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.member-website a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.member-website a:hover {
+    text-decoration: underline;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.membership-member {
+    background-color: #e8f4f8;
+    color: #1a3a52;
+}
+
+.membership-silver {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.membership-gold {
+    background-color: #fff8e1;
+    color: #ff8c00;
+}
+
+/* --- Member List Item --- */
+.member-list-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.member-list-item:hover {
+    background-color: var(--light-bg);
+}
+
+.member-list-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+
+.member-list-content {
+    flex-grow: 1;
+}
+
+.member-list-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.member-list-content p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.loading {
+    text-align: center;
+    color: var(--dark-text);
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-section a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+.social a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.social svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    opacity: 0.9;
+}

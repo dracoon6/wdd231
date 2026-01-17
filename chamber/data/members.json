@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Tooele Coffee",
+    "address": "45 Main Street, Tooele, UT 84074",
+    "phone": "(435) 882-3456",
+    "website": "https://www.tooleecoffee.com",
+    "email": "info@tooleecoffee.com",
+    "image": "biz1.svg",
+    "membershipLevel": 1,
+    "description": "Local coffee shop serving specialty beverages and pastries"
+  },
+  {
+    "name": "Valley Hardware",
+    "address": "120 N Main St, Tooele, UT 84074",
+    "phone": "(435) 882-1234",
+    "website": "https://www.valleyhardware.com",
+    "email": "support@valleyhardware.com",
+    "image": "biz2.svg",
+    "membershipLevel": 2,
+    "description": "Full-service hardware and home improvement store"
+  },
+  {
+    "name": "Tooele Fitness",
+    "address": "89 Vine Street, Tooele, UT 84074",
+    "phone": "(435) 882-5555",
+    "website": "https://www.tooleefitness.com",
+    "email": "membership@tooleefitness.com",
+    "image": "biz3.svg",
+    "membershipLevel": 2,
+    "description": "Modern fitness center with equipment and personal training services"
+  },
+  {
+    "name": "Beehive Bakery",
+    "address": "234 E Utah Ave, Tooele, UT 84074",
+    "phone": "(435) 882-4321",
+    "website": "https://www.beehivebakery.com",
+    "email": "orders@beehivebakery.com",
+    "image": "biz4.svg",
+    "membershipLevel": 1,
+    "description": "Artisan bakery specializing in custom cakes and fresh baked goods"
+  },
+  {
+    "name": "Mountain Outdoors",
+    "address": "567 W Main St, Tooele, UT 84074",
+    "phone": "(435) 882-7890",
+    "website": "https://www.mountainoutdoors.com",
+    "email": "sales@mountainoutdoors.com",
+    "image": "biz5.svg",
+    "membershipLevel": 3,
+    "description": "Outdoor recreation equipment and adventure trip planning services"
+  },
+  {
+    "name": "Tooele Legal",
+    "address": "345 S Main St, Suite 100, Tooele, UT 84074",
+    "phone": "(435) 882-9999",
+    "website": "https://www.tooelelaw.com",
+    "email": "consultation@tooelelaw.com",
+    "image": "biz6.svg",
+    "membershipLevel": 2,
+    "description": "Professional legal services for individuals and businesses"
+  },
+  {
+    "name": "Desert Tech",
+    "address": "789 Industrial Blvd, Tooele, UT 84074",
+    "phone": "(435) 882-6789",
+    "website": "https://www.deserttechco.com",
+    "email": "support@deserttechco.com",
+    "image": "biz7.svg",
+    "membershipLevel": 3,
+    "description": "Technology solutions and IT support for local businesses"
+  }
+]
