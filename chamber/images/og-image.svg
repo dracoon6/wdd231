@@ -1,33 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <!-- Background -->
   <rect width="1200" height="630" fill="#1a3a52"/>
   
   <!-- Accent stripe -->
-  <rect width="1200" height="8" y="315" fill="#f4a460"/>
+  <rect width="1200" height="10" y="315" fill="#f4a460"/>
   
   <!-- Decorative elements -->
-  <circle cx="100" cy="100" r="50" fill="#f4a460" opacity="0.2"/>
-  <circle cx="1100" cy="530" r="60" fill="#f4a460" opacity="0.2"/>
+  <circle cx="120" cy="90" r="60" fill="#f4a460" opacity="0.2"/>
+  <circle cx="1080" cy="540" r="80" fill="#f4a460" opacity="0.2"/>
   
   <!-- Logo background circle -->
-  <circle cx="150" cy="150" r="70" fill="#f4a460"/>
-  <text x="150" y="175" font-size="80" text-anchor="middle" fill="#1a3a52" font-weight="bold" font-family="Arial, sans-serif">TC</text>
+  <circle cx="150" cy="150" r="80" fill="#f4a460"/>
+  <text x="150" y="180" font-size="90" text-anchor="middle" fill="#1a3a52" font-weight="bold" font-family="Arial, sans-serif">TC</text>
   
   <!-- Main text -->
-  <text x="600" y="200" font-size="72" text-anchor="middle" fill="#ffffff" font-weight="bold" font-family="Arial, sans-serif">
+  <text x="600" y="160" font-size="64" text-anchor="middle" fill="#ffffff" font-weight="bold" font-family="Arial, sans-serif">
     Tooele Chamber of Commerce
   </text>
   
   <!-- Tagline -->
-  <text x="600" y="280" font-size="48" text-anchor="middle" fill="#f4a460" font-family="Arial, sans-serif">
+  <text x="600" y="240" font-size="44" text-anchor="middle" fill="#f4a460" font-family="Arial, sans-serif">
     Building Business. Building Community.
   </text>
   
   <!-- Description -->
-  <text x="600" y="380" font-size="32" text-anchor="middle" fill="#ecf0f1" font-family="Arial, sans-serif">
+  <text x="600" y="400" font-size="36" text-anchor="middle" fill="#ecf0f1" font-family="Arial, sans-serif">
     Discover Local Business Directory
   </text>
   
   <!-- Bottom accent line -->
-  <line x1="200" y1="500" x2="1000" y2="500" stroke="#f4a460" stroke-width="3"/>
+  <line x1="150" y1="520" x2="1050" y2="520" stroke="#f4a460" stroke-width="4"/>
 </svg>
