@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tooele Chamber of Commerce - Business Directory</title>
-    <meta name="description" content="Explore the Tooele Chamber of Commerce business directory. Connect with local businesses, discover membership opportunities, and strengthen community ties.">
+    <title>Tooele Chamber of Commerce - Welcome</title>
+    <meta name="description" content="Welcome to the Tooele Chamber of Commerce. Learn about local events, connect with businesses, and discover why Tooele is a great place to work and live.">
     <meta name="author" content="Daniel Koepke">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Tooele Chamber of Commerce - Business Directory">
-    <meta property="og:description" content="Connect with local businesses and organizations in Tooele. Browse our directory of chamber members and discover membership benefits.">
+    <meta property="og:title" content="Tooele Chamber of Commerce - Welcome">
+    <meta property="og:description" content="Welcome to the Tooele Chamber of Commerce. Learn about local events, connect with businesses, and discover membership opportunities.">
     <meta property="og:image" content="https://dracoon6.github.io/wdd231/chamber/images/og-image.svg">
-    <meta property="og:url" content="https://dracoon6.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://dracoon6.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
 
     <!-- CSS Files -->
@@ -28,7 +28,8 @@
     <!-- JavaScript Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
 </head>
 <body>
     <header>
@@ -44,31 +45,66 @@
 
     <nav>
         <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="directory-section">
-            <h2>Business Directory</h2>
-            <p class="intro-text">Welcome to the Tooele Chamber of Commerce Directory. Connect with local businesses and organizations that are committed to strengthening our community.</p>
-
-            <!-- View Toggle Buttons -->
-            <div class="view-toggle">
-                <button id="grid-view" class="view-btn active" title="Switch to grid view">
-                    <span class="icon">⊞</span> Grid
-                </button>
-                <button id="list-view" class="view-btn" title="Switch to list view">
-                    <span class="icon">☰</span> List
-                </button>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <img src="images/hero-image.svg" alt="Tooele Mountain landscape at sunset" width="1200" height="400" loading="lazy">
+            <div class="hero-overlay">
+                <h2>Welcome to Tooele</h2>
+                <p>Building a Stronger Community Together</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
             </div>
+        </section>
 
-            <!-- Members Container -->
-            <div id="members-container" class="members-grid">
-                <p class="loading">Loading directory...</p>
+        <!-- Current Events Section -->
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-container" id="events-container">
+                <article class="event-card">
+                    <h3>Business Networking Breakfast</h3>
+                    <p><strong>Date:</strong> February 15, 2026</p>
+                    <p><strong>Time:</strong> 7:30 AM - 9:00 AM</p>
+                    <p><strong>Location:</strong> Tooele Dining Center</p>
+                    <p>Join us for our monthly networking breakfast where local business leaders connect and share opportunities.</p>
+                </article>
+                <article class="event-card">
+                    <h3>Spring Community Festival</h3>
+                    <p><strong>Date:</strong> April 5, 2026</p>
+                    <p><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
+                    <p><strong>Location:</strong> Tooele City Park</p>
+                    <p>Celebrate spring with us! Featuring local businesses, vendors, food, and family-friendly activities.</p>
+                </article>
+                <article class="event-card">
+                    <h3>Women in Business Luncheon</h3>
+                    <p><strong>Date:</strong> March 20, 2026</p>
+                    <p><strong>Time:</strong> 12:00 PM - 1:30 PM</p>
+                    <p><strong>Location:</strong> Valley Inn Conference Room</p>
+                    <p>A dedicated event celebrating and supporting women entrepreneurs in our community.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h2>Local Weather</h2>
+            <div class="weather-container" id="weather-container">
+                <div class="loading">Loading weather data...</div>
+            </div>
+        </section>
+
+        <!-- Member Spotlights Section -->
+        <section class="spotlights-section">
+            <h2>Featured Members</h2>
+            <p class="spotlights-intro">Discover our featured gold and silver members</p>
+            <div class="spotlights-container" id="spotlights-container">
+                <div class="loading">Loading featured members...</div>
             </div>
         </section>
     </main>
@@ -91,7 +127,7 @@
                 </a>
                 <a href="https://www.twitter.com/tooelechamber" target="_blank" aria-label="Twitter">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23.953 4.57a10 10 0 002.856-3.51 9.977 9.977 0 01-2.828.856 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        <path d="M23.953 4.57a10 10 0 002.856-3.51 9.977 9.977 0 01-2.828.856 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                     </svg>
                 </a>
                 <a href="https://www.linkedin.com/company/tooele-chamber-of-commerce" target="_blank" aria-label="LinkedIn">
