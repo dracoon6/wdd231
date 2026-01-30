@@ -1,7 +1,7 @@
 // Weather API Integration - OpenWeatherMap
 const weatherContainer = document.getElementById('weather-container');
 
-const OPENWEATHERMAP_API_KEY = '7d4fb5b93d4af21d66a2948710284366'; // Free tier API key for demo
+const OPENWEATHERMAP_API_KEY = 'bd5e378503939ddaee76f12ad7a97608'; // Free tier API key for demo
 const TOOELE_LAT = 40.5503;
 const TOOELE_LON = -112.2948;
 
