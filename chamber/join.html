@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooele Chamber of Commerce - Join</title>
+    <meta name="description" content="Join the Tooele Chamber of Commerce. Fill out our membership application form to start connecting with local businesses and growing your network.">
+    <meta name="author" content="Daniel Koepke">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Tooele Chamber of Commerce - Join">
+    <meta property="og:description" content="Join the Tooele Chamber of Commerce and grow your business network with local organizations.">
+    <meta property="og:image" content="https://dracoon6.github.io/wdd231/chamber/images/og-image.svg">
+    <meta property="og:url" content="https://dracoon6.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.svg" alt="Tooele Chamber Logo" width="50" height="50" loading="lazy">
+            <div class="header-text">
+                <h1>Tooele Chamber of Commerce</h1>
+                <p class="tagline">Building Business. Building Community.</p>
+            </div>
+        </div>
+        <button id="menu" aria-label="Toggle Navigation Menu"></button>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="join-section">
+            <h2>Join the Tooele Chamber of Commerce</h2>
+            <p class="intro-text">Become part of a thriving community dedicated to business growth and community development. Fill out the form below to apply for membership.</p>
+
+            <div class="join-container">
+                <!-- Membership Application Form -->
+                <form method="get" action="thankyou.html" class="membership-form">
+                    <fieldset>
+                        <legend>Applicant Information</legend>
+                        
+                        <label for="first-name">First Name *
+                            <input 
+                                type="text" 
+                                id="first-name" 
+                                name="first-name" 
+                                title="Enter your first name"
+                                autocomplete="given-name"
+                                required>
+                        </label>
+
+                        <label for="last-name">Last Name *
+                            <input 
+                                type="text" 
+                                id="last-name" 
+                                name="last-name" 
+                                title="Enter your last name"
+                                autocomplete="family-name"
+                                required>
+                        </label>
+
+                        <label for="email">Email Address *
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                title="Enter a valid email address"
+                                autocomplete="email"
+                                placeholder="user@example.com"
+                                required>
+                        </label>
+
+                        <label for="phone">Phone Number *
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                title="Enter your phone number"
+                                autocomplete="tel"
+                                required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Business Information</legend>
+                        
+                        <label for="business-name">Business/Organization Name *
+                            <input 
+                                type="text" 
+                                id="business-name" 
+                                name="business-name" 
+                                title="Enter your business or organization name"
+                                autocomplete="organization"
+                                required>
+                        </label>
+
+                        <label for="title">Your Title in Organization *
+                            <input 
+                                type="text" 
+                                id="title" 
+                                name="title" 
+                                title="Enter your title (minimum 7 characters, letters, hyphens, and spaces only)"
+                                autocomplete="organization-title"
+                                pattern="^[a-zA-Z\s\-]{7,}$"
+                                required>
+                        </label>
+
+                        <label for="description">Business/Organization Description
+                            <textarea 
+                                id="description" 
+                                name="description" 
+                                title="Describe your business or organization"
+                                rows="5"></textarea>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Membership Level</legend>
+                        
+                        <label for="membership-level">Select Membership Level *
+                            <select 
+                                id="membership-level" 
+                                name="membership-level" 
+                                title="Choose a membership level"
+                                required>
+                                <option value="">-- Select a Membership Level --</option>
+                                <option value="np">NP Membership (Non-Profit) - Free</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Form Submission</legend>
+                        
+                        <input 
+                            type="hidden" 
+                            id="timestamp" 
+                            name="timestamp">
+
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </fieldset>
+                </form>
+
+                <!-- Membership Level Cards -->
+                <aside class="membership-cards">
+                    <h3>Membership Levels</h3>
+
+                    <!-- NP Membership Card -->
+                    <div class="membership-card np-card">
+                        <h4>NP Membership</h4>
+                        <p class="membership-price">Free</p>
+                        <p class="membership-subtitle">For Non-Profit Organizations</p>
+                        <button class="info-btn" data-modal="np-modal" title="View NP Membership benefits">Learn More</button>
+                    </div>
+
+                    <!-- Bronze Membership Card -->
+                    <div class="membership-card bronze-card">
+                        <h4>Bronze Membership</h4>
+                        <p class="membership-price">$99/year</p>
+                        <p class="membership-subtitle">Basic membership package</p>
+                        <button class="info-btn" data-modal="bronze-modal" title="View Bronze Membership benefits">Learn More</button>
+                    </div>
+
+                    <!-- Silver Membership Card -->
+                    <div class="membership-card silver-card">
+                        <h4>Silver Membership</h4>
+                        <p class="membership-price">$249/year</p>
+                        <p class="membership-subtitle">Enhanced visibility and networking</p>
+                        <button class="info-btn" data-modal="silver-modal" title="View Silver Membership benefits">Learn More</button>
+                    </div>
+
+                    <!-- Gold Membership Card -->
+                    <div class="membership-card gold-card">
+                        <h4>Gold Membership</h4>
+                        <p class="membership-price">$499/year</p>
+                        <p class="membership-subtitle">Premium benefits and recognition</p>
+                        <button class="info-btn" data-modal="gold-modal" title="View Gold Membership benefits">Learn More</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals for Membership Benefits -->
+
+    <!-- NP Membership Modal -->
+    <dialog id="np-modal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close dialog">&times;</button>
+            <h3>NP Membership Benefits</h3>
+            <ul class="benefits-list">
+                <li>Member listing in Business Directory</li>
+                <li>Networking event invitations</li>
+                <li>Community bulletin board access</li>
+                <li>Participation in chamber meetings</li>
+                <li>Non-profit resources and support</li>
+            </ul>
+            <p class="modal-note"><strong>Ideal for:</strong> Non-profit organizations and community groups</p>
+        </div>
+    </dialog>
+
+    <!-- Bronze Membership Modal -->
+    <dialog id="bronze-modal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close dialog">&times;</button>
+            <h3>Bronze Membership Benefits</h3>
+            <ul class="benefits-list">
+                <li>Member listing in Business Directory</li>
+                <li>All NP Membership benefits</li>
+                <li>Monthly networking events</li>
+                <li>Chamber newsletter access</li>
+                <li>Business resources and referral network</li>
+                <li>10% discount on chamber events</li>
+            </ul>
+            <p class="modal-note"><strong>Ideal for:</strong> Small businesses and startups</p>
+        </div>
+    </dialog>
+
+    <!-- Silver Membership Modal -->
+    <dialog id="silver-modal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close dialog">&times;</button>
+            <h3>Silver Membership Benefits</h3>
+            <ul class="benefits-list">
+                <li>All Bronze Membership benefits</li>
+                <li>Quarterly spotlight feature in directory</li>
+                <li>Social media promotion</li>
+                <li>Priority event registration</li>
+                <li>Exclusive training workshops</li>
+                <li>Chamber ambassador program</li>
+                <li>25% discount on all chamber events</li>
+                <li>Booth space at trade shows (2/year)</li>
+            </ul>
+            <p class="modal-note"><strong>Ideal for:</strong> Growing businesses seeking increased visibility</p>
+        </div>
+    </dialog>
+
+    <!-- Gold Membership Modal -->
+    <dialog id="gold-modal" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close dialog">&times;</button>
+            <h3>Gold Membership Benefits</h3>
+            <ul class="benefits-list">
+                <li>All Silver Membership benefits</li>
+                <li>Featured spotlight on home page</li>
+                <li>Monthly newsletter feature</li>
+                <li>Logo displayed on all chamber materials</li>
+                <li>VIP access to networking events</li>
+                <li>Dedicated member services representative</li>
+                <li>50% discount on all chamber services</li>
+                <li>Premium booth space at trade shows (4/year)</li>
+                <li>Complimentary marketing consultation</li>
+                <li>Board meeting invitation as guest speaker</li>
+            </ul>
+            <p class="modal-note"><strong>Ideal for:</strong> Established businesses and corporations</p>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tooele Chamber of Commerce</h3>
+                <p>P.O. Box 1177<br>Tooele, UT 84074</p>
+                <p>Phone: (435) 882-8000<br>Email: info@tooelechamber.org</p>
+                <p>Website: <a href="https://www.tooelechamber.org" target="_blank">www.tooelechamber.org</a></p>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Connect With Us</h3>
+                <a href="https://www.facebook.com/tooelechamber" target="_blank" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="https://www.twitter.com/tooelechamber" target="_blank" aria-label="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 002.856-3.51 9.977 9.977 0 01-2.828.856 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/tooele-chamber-of-commerce" target="_blank" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy;<span id="currentyear"></span> Tooele Chamber of Commerce | Daniel Koepke | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
