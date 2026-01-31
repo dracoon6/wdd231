@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoButtons = document.querySelectorAll('.info-btn');
     
     infoButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
             const modalId = this.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
             
@@ -37,11 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close modals
+    // Close modals with close button
     const closeButtons = document.querySelectorAll('.close-modal');
     
     closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
             // Find the parent modal dialog
             const modal = this.closest('dialog');
             if (modal) {
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modals = document.querySelectorAll('.membership-modal');
     
     modals.forEach(modal => {
+        // Close by clicking backdrop
         modal.addEventListener('click', function(event) {
             // Only close if clicking on the dialog background, not the content
             if (event.target === this) {
@@ -61,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Close with Escape key
+        // Close with Escape key (native browser support)
         modal.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 this.close();
