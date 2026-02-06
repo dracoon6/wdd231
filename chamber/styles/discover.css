@@ -1,0 +1,306 @@
+/* ====================================== */
+/* --- Discover Page Specific Styles --- */
+/* ====================================== */
+
+/* --- Visitor Message --- */
+.visitor-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f0f8ff;
+    border-left: 4px solid var(--accent-color, #f4a460);
+    border-radius: 4px;
+    font-weight: 600;
+    color: #333;
+}
+
+.visitor-info {
+    font-size: 1.1rem;
+}
+
+/* --- Discover Section --- */
+.discover-section {
+    padding: 1rem;
+}
+
+.discover-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color, #222);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ====================================== */
+/* --- MOBILE LAYOUT (320px - 640px) --- */
+/* ====================================== */
+
+.attractions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.attraction-card {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "image"
+        "address"
+        "description"
+        "button";
+    gap: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.attraction-card h2 {
+    grid-area: title;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary-color, #222);
+}
+
+.attraction-card figure {
+    grid-area: image;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.attraction-card figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.attraction-card figcaption {
+    font-size: 0.9rem;
+    color: #888;
+    padding-top: 0.5rem;
+    font-style: italic;
+}
+
+.attraction-card address {
+    grid-area: address;
+    font-style: normal;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.attraction-card p {
+    grid-area: description;
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.learn-more-btn {
+    grid-area: button;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color, #f4a460);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #e0944e;
+    transform: translateY(-2px);
+}
+
+.learn-more-btn:active {
+    transform: translateY(0);
+}
+
+/* ====================================== */
+/* --- TABLET LAYOUT (641px - 1024px) - */
+/* ====================================== */
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .attractions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .attraction-card {
+        grid-template-areas:
+            "title title"
+            "image image"
+            "address address"
+            "description description"
+            "button button";
+    }
+
+    .attract-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .visitor-message {
+        grid-column: 1 / -1;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ====================================== */
+/* --- DESKTOP LAYOUT (1025px+) ------- */
+/* ====================================== */
+
+@media screen and (min-width: 1025px) {
+    .discover-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .attractions-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    /* Define named grid areas for each card */
+    .attraction-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .attraction-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .attraction-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .attraction-card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .attraction-card:nth-child(5) {
+        grid-area: card5;
+    }
+
+    .attraction-card:nth-child(6) {
+        grid-area: card6;
+    }
+
+    .attraction-card:nth-child(7) {
+        grid-area: card7;
+    }
+
+    .attraction-card:nth-child(8) {
+        grid-area: card8;
+    }
+
+    /* Internal grid for desktop cards */
+    .attraction-card {
+        grid-template-areas:
+            "title"
+            "image"
+            "address"
+            "description"
+            "button";
+        grid-template-columns: 1fr;
+    }
+
+    .attraction-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .attraction-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Image hover effects for desktop only */
+    .attraction-card figure img {
+        transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .attraction-card:hover figure img {
+        transform: scale(1.08);
+        filter: brightness(1.1) contrast(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .attraction-card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .visitor-message {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ====================================== */
+/* --- Alternative Desktop Layout ---- */
+/* --- Uses different grid arrangement -- */
+/* ====================================== */
+
+/* Uncomment this section to use an alternative desktop layout */
+/* 
+@media screen and (min-width: 1025px) {
+    .attractions-grid {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card8";
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+*/
+
+/* ====================================== */
+/* --- Responsive Image Effects -------- */
+/* ====================================== */
+
+/* Ensure no hover effects on mobile and tablet */
+@media screen and (max-width: 1024px) {
+    .attraction-card figure img {
+        transition: none;
+    }
+
+    .attraction-card:hover figure img {
+        transform: none;
+        filter: none;
+        box-shadow: none;
+    }
+}
+
+/* ====================================== */
+/* --- Print Styles -------------------- */
+/* ====================================== */
+
+@media print {
+    .visitor-message {
+        display: none;
+    }
+
+    .attractions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .attraction-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
