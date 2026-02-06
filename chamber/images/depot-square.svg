@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <linearGradient id="depotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D3D3D3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A9A9A9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="#90EE90"/>
+  <rect x="60" y="60" width="180" height="90" fill="url(#depotGrad)" stroke="#333" stroke-width="2"/>
+  <polygon points="60,60 150,20 240,60" fill="#8B0000"/>
+  <rect x="80" y="80" width="30" height="40" fill="#87CEEB" stroke="#333" stroke-width="1"/>
+  <rect x="140" y="80" width="30" height="40" fill="#87CEEB" stroke="#333" stroke-width="1"/>
+  <rect x="200" y="80" width="30" height="40" fill="#87CEEB" stroke="#333" stroke-width="1"/>
+  <circle cx="150" cy="150" r="15" fill="#333"/>
+  <line x1="120" y1="155" x2="180" y2="155" stroke="#333" stroke-width="3"/>
+  <text x="150" y="185" font-size="16" text-anchor="middle" fill="#333" font-weight="bold">Depot Square</text>
+</svg>

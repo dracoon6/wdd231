@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <defs>
+    <linearGradient id="byGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#708090;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F4F4F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#byGrad)"/>
+  <path d="M 0 100 L 50 50 L 100 80 L 150 40 L 200 70 L 250 45 L 300 80 L 300 200 L 0 200 Z" fill="url(#mountGrad2)"/>
+  <polygon points="50,50 60,70 40,70" fill="#FFF"/>
+  <polygon points="150,40 165,70 135,70" fill="#FFF"/>
+  <polygon points="250,45 265,75 235,75" fill="#FFF"/>
+  <line x1="30" y1="140" x2="270" y2="140" stroke="#FFD700" stroke-width="3"/>
+  <text x="150" y="160" font-size="16" text-anchor="middle" fill="white" font-weight="bold">Scenic Byway</text>
+</svg>
