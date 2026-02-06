@@ -78,7 +78,7 @@ function createAttractionCard(attraction, index) {
         <h2>${attraction.name}</h2>
         <figure>
             <img 
-                src="images/${attraction.image}" 
+                src="/wdd231/chamber/images/${attraction.image}" 
                 alt="${attraction.name}" 
                 width="300" 
                 height="200"
