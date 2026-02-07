@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draconia Atiesh - Website Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blood-red: #880808;
+            --dark-blue: #00224b;
+            --gold: #bb8010;
+            --light-text: #f0f0f0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--light-text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            border-bottom: 3px solid var(--blood-red);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--blood-red);
+        }
+
+        p, ul {
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+        .section {
+            background-color: #002e63;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--gold);
+        }
+        .color-box {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 2px solid var(--light-text);
+            vertical-align: middle;
+        }
+
+        .red-box {
+            background-color: var(--blood-red);
+        }
+
+        .blue-box {
+            background-color: var(--dark-blue);
+        }
+
+        .gold-box {
+            background-color: var(--gold);
+        }
+
+        .font-example {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .wireframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .wireframe-box {
+            background-color: #011634;
+            border: 1px dashed var(--gold);
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1 1 300px;
+        }
+
+            .wireframe-box h3 {
+                margin-top: 0;
+                color: var(--light-text);
+                font-family: 'Roboto', sans-serif;
+                border-bottom: 1px solid var(--blood-red);
+                padding-bottom: 5px;
+                margin-bottom: 10px;
+            }
+
+        pre {
+            background-color: #00122b;
+            color: var(--gold);
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Draconia Atiesh - Website Planning Document</h1>
+
+    <div class="section">
+        <h2>Site Name & Logo</h2>
+        <p><strong>Site Name:</strong> Draconia Atiesh</p>
+        <p>This name combines the imagery of "Draconia" (referencing dragons, a core fantasy element in Warcraft) with "Atiesh" (the name of the server). The name aims to be memorable and immediately relevant to the guild's purpose and game context.</p>
+        <p><strong>Logo Idea:</strong> A stylized, gold dragon head with glowing red eyes, against a dark blue background.</p>
+    </div>
+
+    <div class="section">
+        <h2>Site Purpose</h2>
+        <p>The site serves as a central hub for the "Draconia" guild on the "Atiesh" realm in Mists of Pandaria Classic. Its primary functions are to foster guild camaraderie, provide a platform for members to sign up for scheduled raids, and offer a simple application process for new members to join.</p>
+    </div>
+
+    <div class="section">
+        <h2>Scenarios</h2>
+        <p>Below are two common scenarios that a site visitor might have, which the website's content and design will address:</p>
+        <ol>
+            <li>
+                <p><strong>How do I join the guild?</strong></p>
+                <p>A new visitor to the site will be able to navigate to a dedicated "Join" or "Apply" page. This page will contain a simple form for them to fill out their character information, class, and experience. Once submitted, the form will email the guild leaders, notifying them of a new application.</p>
+            </li>
+            <li>
+                <p><strong>How do I sign up for raids?</strong></p>
+                <p>A guild member visiting the site will go to the "Raid Signups" page. This page will display a calendar or list of upcoming raids with dates and times. Each raid event will have a button or link that allows the member to sign up and indicate their availability and role (e.g., Tank, Healer, DPS).</p>
+            </li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Color Schema</h2>
+        <p>The chosen color schema is inspired by a classic fantasy aesthetic and the guild's name.</p>
+        <ul>
+            <li>
+                <span class="color-box red-box"></span>
+                <strong>Blood Red (#880808):</strong> Used for accents, borders, and main calls-to-action to grab attention. This color will be used for headings (H2s) and key UI elements.
+            </li>
+            <li>
+                <span class="color-box blue-box"></span>
+                <strong>Blue (#00224b):</strong> The primary background color for the site, providing a deep, serious, and professional tone.
+            </li>
+            <li>
+                <span class="color-box gold-box"></span>
+                <strong>Gold (#bb8010):</strong> Used for important text like the main title (H1) and as a border color, symbolizing prestige and achievement.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Typography</h2>
+        <p>The font choices balance readability with a thematic fantasy feel.</p>
+        <ul>
+            <li>
+                <strong>Headings (H1, H2):</strong> 'Playfair Display', serif;
+                <p class="font-example" style="font-family: 'Playfair Display', serif; color: var(--gold);">Example: This Is a Guild Title</p>
+                <p>A bold, classic serif font that gives the headings a strong, established look.</p>
+            </li>
+            <li>
+                <strong>Body Text (Paragraphs, Lists):</strong> 'Roboto', sans-serif;
+                <p class="font-example" style="font-family: 'Roboto', sans-serif; color: var(--light-text);">Example: The guild website provides a hub for members.</p>
+                <p>A clean, modern, and highly readable sans-serif font for all body content, ensuring text is easy to read at any size.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Wireframe</h2>
+        <p>The following is a simple representation of the home page layout for a mobile and desktop view.</p>
+        <div class="wireframe-container">
+            <div class="wireframe-box">
+                <h3>Mobile View</h3>
+                <pre>
+------------------------------------
+|              Logo                |
+|           Draconia Atiesh        |
+------------------------------------
+|           Navigation Menu        |
+|             (Hamburger)          |
+------------------------------------
+|                                  |
+|         Upcoming Raids Section   |
+|         - Raid 1 (Date, Time)    |
+|         - Raid 2 (Date, Time)    |
+|                                  |
+------------------------------------
+|                                  |
+|        Guild Description         |
+|      (Short paragraph of text)   |
+|                                  |
+------------------------------------
+|                                  |
+|        Join Guild Button         |
+|                                  |
+------------------------------------
+                </pre>
+            </div>
+
+            <div class="wireframe-box">
+                <h3>Desktop View</h3>
+                <pre>
+----------------------------------------------------------------------
+|  Logo | Draconia Atiesh      |  Home | Roster | Join | Contact |
+----------------------------------------------------------------------
+|                                                                    |
+|                                                                    |
+|                       Hero Banner Image                            |
+|                                                                    |
+|                                                                    |
+----------------------------------------------------------------------
+|                                                                    |
+|  [Upcoming Raids]               |  [Guild Description]             |
+|                                 |                                  |
+|  - Raid 1 (Date, Time)          |  (Detailed description about     |
+|  - Raid 2 (Date, Time)          |  the guild's purpose, goals,     |
+|  - Raid 3 (Date, Time)          |  and community culture.)         |
+|                                 |                                  |
+|                                 |                                  |
+----------------------------------------------------------------------
+|                                                                    |
+|                      Call-to-Action: Join Us!                      |
+|                                                                    |
+----------------------------------------------------------------------
+                </pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
