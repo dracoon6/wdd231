@@ -28,13 +28,6 @@
     color: var(--primary-color, #222);
 }
 
-.intro-text {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
 /* ====================================== */
 /* --- MOBILE LAYOUT (320px - 640px) --- */
 /* ====================================== */
@@ -250,24 +243,6 @@
         grid-column: 1 / -1;
     }
 }
-
-/* ====================================== */
-/* --- Alternative Desktop Layout ---- */
-/* --- Uses different grid arrangement -- */
-/* ====================================== */
-
-/* Uncomment this section to use an alternative desktop layout */
-/* 
-@media screen and (min-width: 1025px) {
-    .attractions-grid {
-        grid-template-areas:
-            "card1 card2 card3"
-            "card4 card5 card6"
-            "card7 card8 card8";
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-*/
 
 /* ====================================== */
 /* --- Responsive Image Effects -------- */
