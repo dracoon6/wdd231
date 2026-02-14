@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draconia Atiesh - Guild Home</title>
+    <meta name="description" content="Draconia Atiesh guild on Atiesh server — semi-hardcore MOP Classic raiding guild. Join, view roster and sign up for raids.">
+    <meta name="author" content="Daniel M. Koepke">
+    <meta property="og:title" content="Draconia Atiesh - Guild Home">
+    <meta property="og:description" content="Semi-hardcore raiding guild focused on Mists of Pandaria Classic progression and camaraderie.">
+    <meta property="og:url" content="index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/gild_crest.svg">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/1024px-AllianceLogo.png" alt="Alliance Logo" width="50" height="50" loading="lazy">
+            <div class="logo">
+                <h1>Draconia Atiesh</h1>
+            </div>
+        </div>
+        <nav aria-label="Main navigation">
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+            <ul id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">Roster & Raids</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <img src="images/gild_crest.svg" alt="Draconia Atiesh Guild Crest" loading="lazy">
+        </section>
+        <section class="content-section">
+            <article class="guild-info">
+                <h2>Our Guild</h2>
+                <p>
+                    Welcome to Draconia Atiesh! We are a semi-hardcore raiding guild on the Atiesh server,
+                    focused on progression through Mists of Pandaria Classic content. We value a fun,
+                    friendly, and cooperative atmosphere. Our members are dedicated players who enjoy
+                    pushing content while maintaining a respectful and engaging community.
+                </p>
+                <a href="join.html" class="cta-button">Apply to Join!</a>
+            </article>
+
+            <aside class="raid-info">
+                <h2>Upcoming Raids</h2>
+                <ul class="raid-list">
+                    <li><strong>Mogu'shan Vaults</strong> - Friday, 8:00 PM ST</li>
+                    <li><strong>Heart of Fear</strong> - Saturday, 8:00 PM ST</li>
+                    <li><strong>Terrace of Endless Spring</strong> - Sunday, 8:00 PM ST</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Daniel M. Koepke &#x2022;</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">Attributions</a> &#x2022; <a href="#video">Demo Video</a></p>
+    </footer>
+</body>
+</html>

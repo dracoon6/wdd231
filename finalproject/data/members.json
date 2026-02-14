@@ -1,0 +1,17 @@
+[
+  { "name": "Dracoon", "class": "Warrior", "level": 90, "role": "Tank", "notes": "Guild Master and raid lead." },
+  { "name": "Kaelith", "class": "Mage", "level": 90, "role": "DPS", "notes": "Arcane specialist." },
+  { "name": "Sylvana", "class": "Hunter", "level": 90, "role": "DPS", "notes": "Marksman and pet handler." },
+  { "name": "Malak", "class": "Death Knight", "level": 90, "role": "Tank", "notes": "Off-tank and enrage management." },
+  { "name": "Nyla", "class": "Druid", "level": 90, "role": "Healer", "notes": "Restoration druid." },
+  { "name": "Talos", "class": "Paladin", "level": 90, "role": "Healer", "notes": "Holy support." },
+  { "name": "Aethelred", "class": "Shaman", "level": 90, "role": "DPS", "notes": "Elemental rotation." },
+  { "name": "Zaltar", "class": "Warlock", "level": 90, "role": "DPS", "notes": "Affliction and utility." },
+  { "name": "Mirelle", "class": "Priest", "level": 90, "role": "Healer", "notes": "Discipline and raid support." },
+  { "name": "Vex", "class": "Rogue", "level": 90, "role": "DPS", "notes": "Stealth and interrupts." },
+  { "name": "Korwyn", "class": "Monk", "level": 90, "role": "DPS", "notes": "Brewmaster/WW flexible." },
+  { "name": "Selene", "class": "Mage", "level": 90, "role": "DPS", "notes": "Frost utilities." },
+  { "name": "Harbek", "class": "Warrior", "level": 90, "role": "DPS", "notes": "Arms and raid cooldowns." },
+  { "name": "Ithra", "class": "Druid", "level": 90, "role": "DPS", "notes": "Feral and feral cooldowns." },
+  { "name": "Orion", "class": "Hunter", "level": 90, "role": "DPS", "notes": "Beast mastery on demand." }
+]

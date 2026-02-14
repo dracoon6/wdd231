@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draconia Atiesh - Join Us</title>
+    <meta name="description" content="Apply to join Draconia Atiesh — semi-hardcore MOP Classic raiding guild on Atiesh server.">
+    <meta name="author" content="Daniel M. Koepke">
+    <meta property="og:title" content="Draconia Atiesh - Join">
+    <meta property="og:description" content="Apply to join Draconia Atiesh guild.">
+    <meta property="og:image" content="images/gild_crest.svg">
+    <meta property="og:url" content="join.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/1024px-AllianceLogo.png" alt="Alliance Logo" width="50" height="50" loading="lazy">
+            <div class="logo">
+                <h1>Draconia Atiesh</h1>
+            </div>
+        </div>
+        <nav aria-label="Main navigation">
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+            <ul id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">Roster & Raids</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <img src="images/gild_crest.svg" alt="Draconia Atiesh Guild Crest" loading="lazy">
+        </section>
+        <section class="join-form-section">
+            <h2>Join Our Ranks</h2>
+            <p>
+                If you are a dedicated player looking for a new home, fill out the form below to
+                apply to join Draconia Atiesh. We'll review your application and get back to you soon!
+            </p>
+            <form id="join-form" method="get" action="form-results.html">
+                <div class="form-group">
+                    <label for="char-name">Character Name:</label>
+                    <input type="text" id="char-name" name="char-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="char-class">Class:</label>
+                    <select id="char-class" name="char-class" required>
+                        <option value="">--Select a Class--</option>
+                        <option value="Death Knight">Death Knight</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Hunter">Hunter</option>
+                        <option value="Mage">Mage</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Priest">Priest</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Shaman">Shaman</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Warrior">Warrior</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="char-level">Level:</label>
+                    <input type="number" id="char-level" name="char-level" min="1" max="90" value="90" required>
+                </div>
+                <div class="form-group">
+                    <label for="bnet-id">Battle.net ID (e.g., Player#1234):</label>
+                    <input type="text" id="bnet-id" name="bnet-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Why do you want to join Draconia Atiesh?</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+
+            <p>
+                <a href="form-results.html" class="cta-button" id="view-applications">View Saved Applications</a>
+            </p>
+
+            <div id="form-status" class="hidden"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Daniel M. Koepke &#x2022;</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">Attributions</a> &#x2022; <a href="#video">Demo Video</a></p>
+    </footer>
+</body>
+</html>

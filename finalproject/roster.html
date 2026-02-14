@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draconia Atiesh - Roster & Raids</title>
+    <meta name="description" content="View the roster for Draconia Atiesh and sign up for upcoming raids.">
+    <meta name="author" content="Daniel M. Koepke">
+    <meta property="og:title" content="Draconia Atiesh - Roster">
+    <meta property="og:description" content="Guild roster and raid sign-ups for Draconia Atiesh.">
+    <meta property="og:image" content="images/gild_crest.svg">
+    <meta property="og:url" content="roster.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/roster.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/1024px-AllianceLogo.png" alt="Alliance Logo" width="50" height="50" loading="lazy">
+            <div class="logo">
+                <h1>Draconia Atiesh</h1>
+            </div>
+        </div>
+        <nav aria-label="Main navigation">
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+            <ul id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">Roster & Raids</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <img src="images/gild_crest.svg" alt="Draconia Atiesh Guild Crest" loading="lazy">
+        </section>
+        <section class="roster-section">
+            <h2>Guild Roster</h2>
+            <div id="roster-list">
+                <p>Loading roster...</p>
+            </div>
+        </section>
+        <!-- Accessible modal for member details -->
+        <div id="member-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="member-modal-title">
+            <div class="modal-content">
+                <button id="modal-close" class="modal-close" aria-label="Close dialog">Close</button>
+                <h3 id="member-modal-title"></h3>
+                <div id="member-modal-body"></div>
+            </div>
+        </div>
+        <section class="raids-signup-section">
+            <h2>Raid Sign-ups</h2>
+            <p>Select a raid below to sign up.</p>
+            <div class="raid-signup-list">
+                <div class="raid-item">
+                    <h3>Mogu'shan Vaults</h3>
+                    <p><strong>Date:</strong> Friday, 8:00 PM ST</p>
+                    <p><strong>Status:</strong> Needs DPS</p>
+                    <button class="signup-btn" data-raid="Mogu'shan Vaults">Sign Up</button>
+                </div>
+                <div class="raid-item">
+                    <h3>Heart of Fear</h3>
+                    <p><strong>Date:</strong> Saturday, 8:00 PM ST</p>
+                    <p><strong>Status:</strong> Ready to go!</p>
+                    <button class="signup-btn" data-raid="Heart of Fear">Sign Up</button>
+                </div>
+                <div class="raid-item">
+                    <h3>Terrace of Endless Spring</h3>
+                    <p><strong>Date:</strong> Sunday, 8:00 PM ST</p>
+                    <p><strong>Status:</strong> Needs Healers</p>
+                    <button class="signup-btn" data-raid="Terrace of Endless Spring">Sign Up</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Daniel M. Koepke &#x2022;</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">Attributions</a> &#x2022; <a href="#video">Demo Video</a></p>
+    </footer>
+</body>
+</html>

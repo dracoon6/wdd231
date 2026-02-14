@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Results - Draconia Atiesh</title>
+    <meta name="description" content="Form submission results for Draconia Atiesh application.">
+    <meta name="author" content="Daniel M. Koepke">
+    <meta property="og:title" content="Application Results - Draconia Atiesh">
+    <meta property="og:description" content="Review the last application submitted to Draconia Atiesh (saved locally).">
+    <meta property="og:image" content="images/gild_crest.svg">
+    <meta property="og:url" content="form-results.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+<header>
+        <div class="header-content">
+            <img src="images/1024px-AllianceLogo.png" alt="Alliance Logo" width="50" height="50" loading="lazy">
+             <div class="logo">
+                <h1>Draconia Atiesh</h1>
+            </div>
+        </div>
+        <nav aria-label="Main navigation">
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+            <ul id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">Roster & Raids</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="join-form-section">
+            <h2>Application Submitted</h2>
+            <div id="results">
+                <p>Loading submitted data...</p>
+            </div>
+            <p>If you used the form on the Join page, your application was saved locally and is visible here.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Daniel M. Koepke &#x2022;</p>
+        <p id="lastModified"></p>
+        <p><a href="index.html">Home</a></p>
+    </footer>
+
+    <script src="scripts/form-results.js" defer></script>
+</body>
+</html>

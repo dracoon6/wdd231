@@ -1,0 +1,78 @@
+/* Media Query for Tablet and Desktop Views */
+
+@media screen and (min-width: 768px) {
+    /* Header spacing matches style.css */
+    header {
+        padding: 20px 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Show full nav on larger screens and hide the mobile toggle */
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .navigation li {
+        border-right: none;
+    }
+
+    /* Keep main/container spacing light; container already provides padding */
+    main {
+        padding: 0;
+    }
+
+    .content-section {
+        gap: 40px;
+    }
+
+    /* Roster grid uses the same minimum sizing as style.css */
+    #roster-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Keep header spacing consistent */
+    header {
+        padding: 20px 40px;
+    }
+
+    /* Constrain main width to the same max used in style.css container */
+    main {
+        padding: 0;
+        max-width: 1200px;
+    }
+
+    #roster-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Preserve hero's padding-based sizing rather than forcing a fixed height */
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .content-section {
+        gap: 48px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+
+    #roster-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
